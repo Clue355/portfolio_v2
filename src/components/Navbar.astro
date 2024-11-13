@@ -1,0 +1,62 @@
+---
+export interface Props extends astroHTML.JSX.AnchorHTMLAttributes {}
+
+import GitHubIcon from "../components/ui/icons/github.astro";
+import TwitterIcon from "../components/ui/icons/twitter.astro";
+
+import '../styles/global.css';
+
+const { href, class: className, ...props } = Astro.props;
+const path = Astro.url.pathname.replace(/\/$/, "");
+
+const isHome = href === '/' && path === '';
+const isOtherPages = typeof href === "string" && href.length > 1
+    ? path.substring(1).startsWith(href.substring(1))
+    : false;
+const isActive = isHome || isOtherPages
+---
+
+<nav class="navlinks">
+    <div class="navcontainer">
+        <p>Clue</p>
+        <ul class="navlist list">
+            <!-- <li><a href="/">Home</a></li> -->
+            <li><a href="/blog/">Blog</a></li>
+        </ul>
+    </div>
+</nav>
+<style>
+    .navlinks {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 136px;
+        
+        width: 100%;
+    }
+
+    .navcontainer {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+    }
+
+    .navlist {
+        display: flex;
+        justify-content: space-between;
+        max-width: 10rem;
+        width: 100%;
+    }
+
+    .list {
+        list-style-type: none;
+    }
+
+    .link {
+        text-decoration: none;
+    }
+
+    @media (min-width: 1440px) {
+}
+
+</style>
