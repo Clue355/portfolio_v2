@@ -24,7 +24,6 @@ const formattedDate = new Date(date).toLocaleDateString("en-us", {
   month: "short",
   day: "numeric",
 });
-console.log(img)
 ---
 
 <!DOCTYPE html>
@@ -63,8 +62,9 @@ console.log(img)
         "footer";
       grid-template-rows: 5rem minmax(0, 1fr) 5rem;
       grid-template-columns: minmax(0, 1fr);
-      
+
     }
+
     main {
       margin-top: 4rem;
       display: flex;
@@ -76,8 +76,9 @@ console.log(img)
       width: 70ch;
     }
 
-    @media (max-width: 680px) {
-      main {
+    @media (max-width: 700px) {
+      .blog-post {
+        width: 100%;
         padding: 0 1rem;
       }
     }
