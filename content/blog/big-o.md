@@ -103,7 +103,7 @@ Here's a list of the common runtimes the book talks about from fastest to slowes
 
 Here's an example of how each runtime performs that's included in the book:
 
-![Comparison image](/public/images/postImages/big-o/Screenshot%20from%202024-11-14%2019-10-21.png)
+![Comparison image](/images/postImages/big-o/Screenshot%20from%202024-11-14%2019-10-21.png)
 
 Here's an image of the runtimes compared on a chart that might make it a bit more clear:
 
