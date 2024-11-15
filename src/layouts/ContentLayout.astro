@@ -79,7 +79,13 @@ const formattedDate = new Date(date).toLocaleDateString("en-us", {
     @media (max-width: 700px) {
       .blog-post {
         width: 100%;
-        padding: 0 1rem;
+        margin: 0 .3rem;
+      }
+    }
+
+    @media (max-width: 375px) {
+      .blog-post {
+        margin: 0;
       }
     }
   </style>

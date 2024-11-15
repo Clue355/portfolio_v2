@@ -103,11 +103,7 @@ Here's a list of the common runtimes the book talks about from fastest to slowes
 
 Here's an example of how each runtime performs that's included in the book:
 
-| # of boxes | `O(log n)` | `O(n)`  | `O(n log n)` | `O(n^2)` | `O(n!)`          |
-| ---------- | ---------- | ------- | ------------ | -------- | ---------------- |
-| 26         | 0.4sec     | 1.6sec  | 6.4sec       | 25.6sec  | 66,301years      |
-| 256        | 0.8sec     | 25.6sec | 3.4min       | 1.8hrs   | 2.7x10^498years  |
-| 1024       | 1sec       | 1.7min  | 17min        | 1.2days  | 1.7x10^2631years |
+![Comparison image](/public/images/postImages/big-o/Screenshot%20from%202024-11-14%2019-10-21.png)
 
 Here's an image of the runtimes compared on a chart that might make it a bit more clear:
 
