@@ -53,23 +53,11 @@ const formattedDate = new Date(date).toLocaleDateString("en-us", {
   </body>
 
   <style>
-    body {
-      display: grid;
-      min-height: 100vh;
-      grid-template-areas:
-        "header"
-        "main"
-        "footer";
-      grid-template-rows: 5rem minmax(0, 1fr) 5rem;
-      grid-template-columns: minmax(0, 1fr);
-
-    }
 
     main {
       margin-top: 4rem;
       display: flex;
       justify-content: center;
-      grid-area: main;
     }
 
     .blog-post {
@@ -92,6 +80,8 @@ const formattedDate = new Date(date).toLocaleDateString("en-us", {
 </html>
 
 <style>
+
+
   .posttitle{
     display: flex;
     align-items: center;

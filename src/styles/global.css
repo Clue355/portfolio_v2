@@ -53,13 +53,73 @@
     scroll-behavior: smooth;
 }
 
+/* Set core body defaults */
 body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    -webkit-font-smoothing: antialiased;
+    font-family: Arial, sans-serif; /* or any default font you prefer */
+    font-size: 1rem; /* or whatever base size you prefer */
+    line-height: 1.5;
     color: var(--text);
-    background: var(--background);
     margin: auto;
-    text-align: left;
-    word-wrap: break-word;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-behavior: smooth;
+    text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body > footer {
+    position: sticky;
+    top: 100vh;
+}
+
+/* Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     overflow-wrap: break-word;
+}
+
+p {
+    margin: 0.5rem 0 0.5rem 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal; /* or any specific weight */
+}
+
+li {
+    margin-left: 1.5rem;
 }
 
 strong,
@@ -84,7 +144,13 @@ table {
     width: 100%;
 }
 
-img {
+/* Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
     max-width: 100%;
     height: auto;
 }
@@ -140,28 +206,6 @@ blockquote:not(.unset)::after {
 /* ------ REUSABLE UTIL STYLES - START ------ */
 
 /* 
-	class: gradient-text
-	The text will be gradient.
-	To use this, just set the css vars using a custom class in your component
-*/
-.gradient-text {
-    --gradient-text-from: hotpink;
-    --gradient-text-to: hotpink;
-    --gradient-text-via: var(--gradient-text-from), var(--gradient-text-to);
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-    text-fill-color: transparent;
-    -webkit-text-fill-color: transparent;
-    background-image: linear-gradient(
-        135deg,
-        var(--gradient-text-from),
-        var(--gradient-text-via),
-        var(--gradient-text-to)
-    );
-}
-
-/* 
 	class: a.animated
 	Animated links. An animated underline on hover.
 */
@@ -198,6 +242,92 @@ a:hover {
     color: var(--text-link);
 }
 
+/*-----Browser Inconsistancy Fixes-----*/
+button,
+input,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+    appearance: button;
+}
+
+[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    appearance: textfield;
+    outline-offset: -2px; /* 2 */
+}
+
+::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+    height: auto;
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button; /* 1 */
+    font: inherit; /* 2 */
+}
+
+::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+/* end of CSS reset */
+/* global styles */
+
+.section_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.inner_div {
+    width: 100%;
+    height: 100%;
+    max-width: 1440px;
+}
+
+/* global accessibility styles */
+
+.hover:hover {
+    background-color: black;
+    color: #fcfcfd;
+}
+
+.no_decor:hover {
+    text-decoration: none;
+}
+
+.no_border {
+    border: none;
+}
+
+.opacity_z {
+    opacity: 0;
+}
+
+.no_size {
+    display: block;
+    height: 0;
+    width: 0;
+}
+
+.better_focus:focus {
+    outline: 3px solid #000000;
+    outline-offset: 3px;
+    border-radius: 5px;
+}
+
 /* ------ REUSABLE UTIL STYLES - START ------ */
 
 /* ------ custom styles ------- */
@@ -212,9 +342,4 @@ a:hover {
     justify-content: space-between;
     max-width: 80rem;
     width: 100%;
-}
-
-sup {
-    vertical-align: super;
-    font-size: smaller;
 }
