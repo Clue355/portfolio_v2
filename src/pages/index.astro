@@ -4,66 +4,195 @@ import PageLayout from '../layouts/PageLayout.astro';
 ---
 
 <PageLayout title="Clue">
-	<main>
+	<main slot="main" class="parent" >
 
+		<!-- hero section  -->
+
+		<section class="hero is section-padding">
+			<div class="align-middle hero-section">
+				<img class="image" src="/images/pic.jpg" alt="picture of the developer" />
+				<div>
+					<p class="name z-margin">Carlos Luevano</p>
+					<p class="jobtitle z-margin">Front End Developer</p>
+				</div>
+			</div>
+
+			<!-- hero summary -->
+
+			<div>
+				<p class="summary z-margin">
+					Hi I’m a Front End Developer with over 2+ years of experience. 
+					I like making websites profitable for businesses by creating websites using my knowledge on design, seo, and accessibility. 
+				</p>
+			</div>
+		</section>
+
+		<!-- experience section -->
+		
+		<h2 class="subtitle is section-padding">Experience</h2>
+
+		<section class="exp-parent is section-padding">
+			<div class="exp-job">
+				<p class="exp-job-date z-margin">Nov 2023 - Nov 2024</p>
+				<p class="exp-job-title z-margin">Front End Developer - MDJ Studios</p>
+				<p class="exp-job-desc">
+					 Collaborated with a small team to build websites for local businesses using modern technologies.
+					 Here I also learned about SEO and Accessibility techniques for ensuring websites showed on the top listings of search 
+					 engines and were accessible to everyone. I also audited a SAAS product to ensure it met etsy standards for providing API 
+					 keys by erasing mentions of AI and features that included AI. 
+					</p>
+				<div class="exp-job-tech">
+					<p class="exp-job-tech-p">HTML</p>
+					<p class="exp-job-tech-p">CSS</p>
+					<p class="exp-job-tech-p">Javascript</p>
+					<p class="exp-job-tech-p">React</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Projects section  -->
+
+		<h2 class="subtitle is section-padding">Projects</h2>
+
+		<section class="exp-parent is section-padding">
+			<a href="https://www.rogerswildlife.org/" class="projec-link">
+				<div class="proj-tech">
+					<p class="proj-tech-title z-margin">Rogers Wildlife Rehabilitation Center</p>
+					<p class="proj-tech-desc z-margin">
+						Developed a website for a local non-profit utilizing modern tech. 
+					</p>
+					<div class="exp-job-tech">
+						<p class="proj-tech-p">HTML</p>
+						<p class="proj-tech-p">CSS</p>
+						<p class="proj-tech-p">Next JS</p>
+					</div>
+					
+				</div>
+			</a>
+		</section>
 	</main>
 </PageLayout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
+
+
+	.z-margin {
+		margin: 0;
+	}
+
+	.is {
+		max-width: 694px;
+	}
+
+
+	.align-middle {
+		display: flex;
+		justify-content: center;
+		flex-direction: row;
+	}
+
+	.hero-section {
+		margin-bottom: 34px;
+	}
+
+	.name {
+		font-size: 24px;
+	}
+
+	.jobtitle {
+		font-size: 18px;
+	}
+
+	.summary {
+		font-size: 1.5rem;
+	}
+
+
+
+	.image {
+		width: 102px;
+		height: 83px;
+		margin-right: 43px;
+		object-fit: cover;
+		border-radius: 5px;
+	}
+
+	.subtitle {
+		width: 100%;
+		max-width: ;
+		margin: 50px 0 50px 0;
+		font-size: 32px;
+	}
+
+	.exp-parent {
+		display: flex;
+		width: 100%;
+	}
+
+	.exp-job {
+		display: flex;
+		justify-content: start;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.exp-job-date {
+		color: var(--primary);
+	}
+
+	.exp-job-title {
 		font-size: 20px;
-		line-height: 1.6;
 	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
+
+	.exp-job-desc {
+		margin: 0 0 14px 0;
 	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
+
+	.exp-job-tech {
+		display: flex;
+
 	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
+
+	.exp-job-tech-p {
+		margin: 0 10px 0 0;
+		padding: 3px 5px;
+		background-color: #2A2D30;
+		border-radius: 5px;
+		border: .5px solid rgba(224,224,224,.1);
+
 	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
+
+	.proj-tech {
+		width: 100%;
+		background-color: #2A2D30;
+		border-radius: 5px;
+		margin: 0 0 10px 0;
+		padding: 18px 20px;
 	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
+
+	.proj-tech-title {
+		font-size: 20px;
 	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
+
+	.proj-tech-desc {
+		margin: 10px 0;
 	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
+
+	.proj-tech-p {
+		color: var(--primary);
+		margin: 0 10px 0 0;
 	}
+
+	.projec-link, .projec-link:visited {
+		width: 100%;
+		color: var(--text);
+		text-decoration: none; 
+	}
+
+	@media (max-width: 730px) {
+		.section-padding {
+			padding: 0 10px;
+		}
+	}
+
 </style>

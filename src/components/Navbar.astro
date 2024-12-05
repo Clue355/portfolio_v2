@@ -18,7 +18,7 @@ const isActive = isHome || isOtherPages
 
 <nav class="navlinks">
     <div class="navcontainer">
-        <p>Clue</p>
+        <a href="/" class="nav-link">Clue</a>
         <ul class="navlist list">
             <!-- <li><a href="/">Home</a></li> -->
             <li><a href="/blog/">Blog</a></li>
@@ -35,9 +35,16 @@ const isActive = isHome || isOtherPages
         width: 100%;
     }
 
+    .nav-link, .nav-link:visited {
+		width:min-content;
+		color: var(--text);
+		text-decoration: none; 
+	}
+
     .navcontainer {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         width: 80%;
     }
 

@@ -6,7 +6,7 @@
 
 /* ------ THEMING - Light Mode ------ */
 :root {
-    --palette-primary: #4f46e5;
+    --primary: #70aff5;
 
     --text: #1e293b;
     --text-muted: #64748b;
@@ -18,7 +18,7 @@
     --code-border: #e2e8f0;
 
     --border: #e2e8f0;
-    --background: #ffffff;
+    --background: #1d1f21;
 }
 
 /* ------ THEMING - Dark Mode ------ */
@@ -33,11 +33,11 @@
         --text-link: #20bdff;
 
         --code-text: #cbd5e0;
-        --code-background: #1f2631;
+        --code-background: #1d1f21;
         --code-border: #2d3748;
 
         --border: #2d3748;
-        --background: #18181b;
+        --background: #1d1f21;
     }
 
     html {
@@ -58,11 +58,12 @@ body {
     min-height: 100vh;
     text-rendering: optimizeSpeed;
     -webkit-font-smoothing: antialiased;
-    font-family: Arial, sans-serif; /* or any default font you prefer */
+    font-family: "Kumbh Sans", sans-serif; /* or any default font you prefer */
     font-size: 1rem; /* or whatever base size you prefer */
     line-height: 1.5;
     color: var(--text);
     margin: auto;
+    background-color: #1d1f21;
 }
 
 /* Set core root defaults */
@@ -85,7 +86,6 @@ html {
 }
 
 * {
-    margin: 0;
     padding: 0;
 }
 
@@ -104,11 +104,6 @@ h5,
 h6 {
     overflow-wrap: break-word;
 }
-
-p {
-    margin: 0.5rem 0 0.5rem 0 !important;
-}
-
 h1,
 h2,
 h3,
@@ -335,6 +330,8 @@ input,
 .parent {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .container {
