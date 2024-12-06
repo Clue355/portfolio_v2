@@ -37,7 +37,7 @@ const isActive = isHome || isOtherPages
 
     .nav-link, .nav-link:visited {
 		width:min-content;
-		color: var(--text);
+		color: var(--primary);
 		text-decoration: none; 
 	}
 
@@ -53,6 +53,10 @@ const isActive = isHome || isOtherPages
         justify-content: space-between;
         max-width: 10rem;
         width: 100%;
+    }
+
+    .navlist > a:visited {
+        color: var(--primary);
     }
 
     .list {

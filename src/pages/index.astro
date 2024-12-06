@@ -54,12 +54,19 @@ import PageLayout from '../layouts/PageLayout.astro';
 
 		<h2 class="subtitle is section-padding">Projects</h2>
 
-		<section class="exp-parent is section-padding">
-			<a href="https://www.rogerswildlife.org/" class="projec-link">
-				<div class="proj-tech">
+		<section class="exp-parent is section-padding  proj-margin">
+			<a href="https://www.rogerswildlife.org/" class="projec-link" target="_blank">
+				<div class="proj-tech proj">
+					<div class="icon">
+						<p>click to view project</p>
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M21.5223 5.74723C22.3809 3.68663 20.3136 1.61941 18.253 2.478L4.0366 8.40151C1.25632 9.55996 1.72626 13.6348 4.69725 14.1299L9.13133 14.8689L9.87034 19.303C10.3655 22.274 14.4403 22.7439 15.5988 19.9637L21.5223 5.74723Z" fill="#F4F5F6"/>
+						</svg>
+					</div>
 					<p class="proj-tech-title z-margin">Rogers Wildlife Rehabilitation Center</p>
 					<p class="proj-tech-desc z-margin">
-						Developed a website for a local non-profit utilizing modern tech. 
+						Developed a website for a local non-profit utilizing modern tech. Updated the look
+						of the original website and added new features.
 					</p>
 					<div class="exp-job-tech">
 						<p class="proj-tech-p">HTML</p>
@@ -117,6 +124,17 @@ import PageLayout from '../layouts/PageLayout.astro';
 		border-radius: 5px;
 	}
 
+	.icon {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: absolute;
+		right: 5px;
+		top: 10px;
+		width: 180px;
+		height: 15px;
+	}
+
 	.subtitle {
 		width: 100%;
 		max-width: ;
@@ -162,10 +180,15 @@ import PageLayout from '../layouts/PageLayout.astro';
 
 	}
 
+	.proj {
+		position: relative;
+	}
+
 	.proj-tech {
 		width: 100%;
 		background-color: #2A2D30;
 		border-radius: 5px;
+		border: .5px solid rgba(224,224,224,.1);
 		margin: 0 0 10px 0;
 		padding: 18px 20px;
 	}
@@ -189,10 +212,24 @@ import PageLayout from '../layouts/PageLayout.astro';
 		text-decoration: none; 
 	}
 
+	/* .proj:hover {
+		background-color: #1c1e20;
+	} */
+
+	.proj-margin {
+		margin-bottom: 20px;
+	}
+
 	@media (max-width: 730px) {
 		.section-padding {
 			padding: 0 10px;
 		}
+
+		.proj-tech {
+		padding: 40px 20px;
+		}
 	}
+
+
 
 </style>
