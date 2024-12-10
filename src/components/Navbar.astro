@@ -20,7 +20,6 @@ const isActive = isHome || isOtherPages
     <div class="navcontainer">
         <a href="/" class="nav-link">Clue</a>
         <ul class="navlist list">
-            <!-- <li><a href="/">Home</a></li> -->
             <li><a href="/blog/">Blog</a></li>
         </ul>
     </div>
@@ -31,7 +30,6 @@ const isActive = isHome || isOtherPages
         justify-content: center;
         align-items: center;
         height: 136px;
-        
         width: 100%;
     }
 
@@ -45,18 +43,22 @@ const isActive = isHome || isOtherPages
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 80%;
+        width: 60%;
     }
 
     .navlist {
         display: flex;
         justify-content: space-between;
         max-width: 10rem;
-        width: 100%;
+        width: max-content;
     }
 
     .navlist > a:visited {
         color: var(--primary);
+    }
+
+    .navlist > li {
+        margin: 0;
     }
 
     .list {
@@ -67,7 +69,10 @@ const isActive = isHome || isOtherPages
         text-decoration: none;
     }
 
-    @media (min-width: 1440px) {
-}
+	@media (max-width: 730px) {
+		.navcontainer {
+            width: 80%;
+        }
+	}
 
 </style>
