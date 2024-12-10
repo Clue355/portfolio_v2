@@ -31,15 +31,16 @@ import PageLayout from '../layouts/PageLayout.astro';
 		
 		<h2 class="subtitle is section-padding">Experience</h2>
 
+		<!-- MDJ studios -->
 		<section class="exp-parent is section-padding">
 			<div class="exp-job">
 				<p class="exp-job-date z-margin">Nov 2023 - Nov 2024</p>
-				<p class="exp-job-title z-margin">Front End Developer - MDJ Studios</p>
+				<p class="exp-job-title z-margin">Software Developer - MDJ Studios</p>
 				<p class="exp-job-desc">
-					 Collaborated with a small team to build websites for local businesses using modern technologies.
-					 Here I also learned about SEO and Accessibility techniques for ensuring websites showed on the top listings of search 
-					 engines and were accessible to everyone. I also audited a SAAS product to ensure it met etsy standards for providing API 
-					 keys by erasing mentions of AI and features that included AI. 
+					Worked with a small team to create websites for local businesses, 
+					focusing on functionality and ease of use. Gained experience in improving search 
+					engine rankings and making websites accessible to a broader audience. Additionally, 
+					reviewed a SaaS product to ensure it complied with Etsy's requirements, including removing references to AI and related features.
 					</p>
 				<div class="exp-job-tech">
 					<p class="exp-job-tech-p">HTML</p>
@@ -48,6 +49,43 @@ import PageLayout from '../layouts/PageLayout.astro';
 					<p class="exp-job-tech-p">React</p>
 				</div>
 			</div>
+
+			<!-- infosys -->
+			<div class="exp-job">
+				<p class="exp-job-date z-margin">Feb 2022 - Jan 2024</p>
+				<p class="exp-job-title z-margin">Tech Support Associate - Infosys</p>
+				<p class="exp-job-desc">
+						Created documentation and assisted in training new employees for my role. 
+						During a contract assignment, managed user accounts to ensure accurate data for on-site 
+						technicians, configured system settings, and collaborated with colleagues to document processes and improve workflows.
+					</p>
+				<div class="exp-job-tech">
+					<p class="exp-job-tech-p">Microsoft Excel</p>
+					<p class="exp-job-tech-p">Microsoft Word</p>
+				</div>
+			</div>
+
+			<!-- YNA -->
+			<div class="exp-job">
+				<p class="exp-job-date z-margin">Aug 2020 - Dec 2023</p>
+				<p class="exp-job-title z-margin">Software Developer - YNA (Young and Ambitious)</p>
+				<p class="exp-job-desc">	
+						Participated in meetings, contributed to design documentation, 
+						and planned applications designed to support a community initiative 
+						helping minorities enter the tech industry. All applications were made open-source.
+					</p>
+				<div class="exp-job-tech">
+					<p class="exp-job-tech-p">HTML</p>
+					<p class="exp-job-tech-p">CSS</p>
+					<p class="exp-job-tech-p">Javascript</p>
+					<p class="exp-job-tech-p">React</p>
+					<p class="exp-job-tech-p">Figma</p>
+					<p class="exp-job-tech-p">React Testing Library</p>
+					<p class="exp-job-tech-p">Docker</p>
+				</div>
+			</div>
+
+
 		</section>
 
 		<!-- Projects section  -->
@@ -144,14 +182,20 @@ import PageLayout from '../layouts/PageLayout.astro';
 
 	.exp-parent {
 		display: flex;
+		flex-direction: column;
 		width: 100%;
 	}
+
 
 	.exp-job {
 		display: flex;
 		justify-content: start;
 		flex-direction: column;
 		width: 100%;
+	}
+
+	.exp-job:not(:last-child) {
+		margin-bottom: 40px;
 	}
 
 	.exp-job-date {
@@ -168,7 +212,8 @@ import PageLayout from '../layouts/PageLayout.astro';
 
 	.exp-job-tech {
 		display: flex;
-
+		flex-wrap: wrap;
+		
 	}
 
 	.exp-job-tech-p {
@@ -178,6 +223,10 @@ import PageLayout from '../layouts/PageLayout.astro';
 		border-radius: 5px;
 		border: .5px solid rgba(224,224,224,.1);
 
+	}
+
+	.exp-job-tech-p {
+		margin-bottom: 5px;
 	}
 
 	.proj {
@@ -205,6 +254,7 @@ import PageLayout from '../layouts/PageLayout.astro';
 		color: var(--primary);
 		margin: 0 10px 0 0;
 	}
+
 
 	.projec-link, .projec-link:visited {
 		width: 100%;
