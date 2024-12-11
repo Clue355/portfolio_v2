@@ -18,13 +18,29 @@ const isActive = isHome || isOtherPages
 
 <nav class="navlinks">
     <div class="navcontainer">
-        <a href="/" class="nav-link">Clue</a>
+        <a href="/" class="nav-link list-i">Clue</a>
+        <ul class="social-list list">
+            <li class="link-margin link list-i"><a href="https://github.com/Clue355" class="link list-i" target="_blank">Github</a></li>
+            <li class="list-i"><a href="https://www.linkedin.com/in/carlos-luevano/" class="link list-i" target="_blank">Linkedin</a></li>
+        </ul>
         <ul class="navlist list">
-            <li><a href="/blog/">Blog</a></li>
+            <li class=""><a href="/blog/" class="link list-i" >Blog</a></li>
         </ul>
     </div>
 </nav>
 <style>
+
+    .social-list {
+        display: flex;
+        justify-content: space-between;
+        width: 10rem;
+        margin: 0;
+    }
+
+    .social-list > li {
+        margin: 0;
+    }
+    
     .navlinks {
         display: flex;
         justify-content: center;
@@ -33,10 +49,8 @@ const isActive = isHome || isOtherPages
         width: 100%;
     }
 
-    .nav-link, .nav-link:visited {
+    .nav-link {
 		width:min-content;
-		color: var(--primary);
-		text-decoration: none; 
 	}
 
     .navcontainer {
@@ -53,10 +67,6 @@ const isActive = isHome || isOtherPages
         width: max-content;
     }
 
-    .navlist > a:visited {
-        color: var(--primary);
-    }
-
     .navlist > li {
         margin: 0;
     }
@@ -65,9 +75,14 @@ const isActive = isHome || isOtherPages
         list-style-type: none;
     }
 
-    .link {
-        text-decoration: none;
+    .list-i:hover {
+        color: azure ;
     }
+
+    .list-i{
+        color: var(--primary);
+    }
+
 
 	@media (max-width: 730px) {
 		.navcontainer {
